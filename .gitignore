@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/java,gradle,maven,eclipse,intellij+all,visualstudiocode,node,angular,react
-# Edit at https://www.toptal.com/developers/gitignore?templates=java,gradle,maven,eclipse,intellij+all,visualstudiocode,node,angular,react
+# Created by https://www.toptal.com/developers/gitignore/api/java,gradle,maven,eclipse,intellij+all,visualstudiocode,node,angular,react,netbeans
+# Edit at https://www.toptal.com/developers/gitignore?templates=java,gradle,maven,eclipse,intellij+all,visualstudiocode,node,angular,react,netbeans
 
 ### Angular ###
 ## Angular ##
@@ -231,6 +231,15 @@ buildNumber.properties
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
 
+### NetBeans ###
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+build/
+nbbuild/
+nbdist/
+.nb-gradle/
+
 ### Node ###
 # Logs
 logs
@@ -432,4 +441,4 @@ gradle-app.setting
 # Java heap dump
 *.hprof
 
-# End of https://www.toptal.com/developers/gitignore/api/java,gradle,maven,eclipse,intellij+all,visualstudiocode,node,angular,react
+# End of https://www.toptal.com/developers/gitignore/api/java,gradle,maven,eclipse,intellij+all,visualstudiocode,node,angular,react,netbeans
