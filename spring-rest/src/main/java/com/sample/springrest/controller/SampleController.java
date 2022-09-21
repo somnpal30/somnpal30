@@ -3,6 +3,7 @@ package com.sample.springrest.controller;
 import com.github.javafaker.Faker;
 import com.sample.springrest.model.Address;
 import com.sample.springrest.model.Employee;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -24,6 +25,9 @@ import java.util.Locale;
 @RequestMapping("/")
 public class SampleController {
 
+
+    @Value("${download.file.path}")
+    private String filename;
 
     @GetMapping("/employee")
     public ResponseEntity<List<Employee>> getEmployee() {
@@ -62,7 +66,7 @@ public class SampleController {
 
     private File getFile()
     {
-        File file = new File("/Users/somnath.pal1/mywork/temp/sample.pdf");
+        File file = new File(filename);
         return  file;
     }
     @GetMapping(value="/showTemplate")
