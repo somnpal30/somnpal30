@@ -1,14 +1,12 @@
 package com.sample.springrest.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @Builder
 @AllArgsConstructor
+@ToString
 public class Address {
     String addressLine1;
     String addressLine2;

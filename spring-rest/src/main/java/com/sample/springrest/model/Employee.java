@@ -1,9 +1,6 @@
 package com.sample.springrest.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
@@ -11,8 +8,10 @@ import java.util.List;
 @Setter
 @Builder
 @AllArgsConstructor
+@ToString
 public class Employee {
     String firstname;
     String lastname;
+    String emailId;
     List<Address> addresses;
 }

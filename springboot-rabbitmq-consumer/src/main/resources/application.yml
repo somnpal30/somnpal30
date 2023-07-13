@@ -1,0 +1,21 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      direct:
+        auto-startup: false
+
+rabbitmq:
+  exchange: spring.boot.exchange
+  queue: spring.boot.queue
+  routingkey: spring.boot.routingkey
+
+
+
+server:
+  port: 8081
