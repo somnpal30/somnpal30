@@ -1,0 +1,6 @@
+server:
+  port: 6001
+spring:
+  kafka:
+    consumer:
+      group-id: request-reply-group

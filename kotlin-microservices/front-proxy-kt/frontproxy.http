@@ -1,0 +1,7 @@
+POST http://127.0.0.1:7001/frontProxy/user/registration/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name" : "hello"
+}
