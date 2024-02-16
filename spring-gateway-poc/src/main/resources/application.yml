@@ -1,0 +1,18 @@
+server:
+  port: 7100
+
+spring:
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: sample-web
+            uri: http://localhost:7081
+            predicates:
+              - Method=GET,POST
+
+
+
+logging:
+  level:
+    org.springframework: DEBUG
