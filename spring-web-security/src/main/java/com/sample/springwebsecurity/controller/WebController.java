@@ -42,6 +42,12 @@ public class WebController {
         return ResponseEntity.ok(countryService.fetchCountryById(countryId));
     }
 
+    @DeleteMapping("/country/{countryId}")
+    public ResponseEntity deleteCountry(@PathVariable String countryId) {
+        countryService.deleteCoutryById(countryId);
+        return ResponseEntity.ok().build();
+    }
+
     @PostMapping("/country")
     public ResponseEntity<Country> createCountry(@RequestBody Country country) {
         return ResponseEntity.ok(countryService.createCountry(country));
@@ -75,11 +81,6 @@ public class WebController {
         return ResponseEntity.ok("OK");
     }
 
-    @DeleteMapping("/country/{countryId}")
-    public ResponseEntity deleteCountry(@PathVariable String countryId) {
-        countryService.deleteCoutryById(countryId);
-        return ResponseEntity.ok().build();
-    }
 
     @PutMapping("/country/{countryId}")
     public ResponseEntity<String> deleteCountry(@PathVariable String countryId, @RequestBody Country country) {

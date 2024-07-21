@@ -1,18 +1,22 @@
 server:
   port: 7100
-
-spring:
-  cloud:
-    gateway:
-      mvc:
-        routes:
-          - id: sample-web
-            uri: http://localhost:7081
-            predicates:
-              - Method=GET,POST
-
+  servlet:
+    context-path: /gateway
+#spring:
+#  cloud:
+#    gateway:
+#      mvc:
+#        routes:
+#          - id: sample-web
+#            uri: http://localhost:7081
+#            predicates:
+#              - Method=GET,POST
+#            filters:
+#              - PrefixPath=/sample-web
+#
 
 
 logging:
   level:
-    org.springframework: DEBUG
+    org.springframework: debug
+    org.springframework.web.HttpLogging: TRACE
